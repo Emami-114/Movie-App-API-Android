@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/dataRoot"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/bg_raw"
+            app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guid_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="150dp"/>
+        <TextView
+                android:id="@+id/tvMovie_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                tools:text="MovieName"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/SandyTan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guid_line"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                   android:id="@+id/imgRate"
+                   android:src="@drawable/ic_star_rate"
+                   app:layout_constraintStart_toStartOf="@id/guid_line"
+                   app:layout_constraintTop_toBottomOf="@id/tvMovie_name"/>
+
+        <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  tools:text="Rate"
+                  android:textColor="@color/white"
+                  android:textSize="10sp"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toEndOf="@id/imgRate"
+                  app:layout_constraintTop_toTopOf="@id/imgRate"
+                  app:layout_constraintBottom_toBottomOf="@id/imgRate"/>
+
+        <ImageView
+                android:id="@+id/image_lagnguage"
+                android:layout_width="15dp" android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_language"
+                app:layout_constraintStart_toStartOf="@id/guid_line"
+                app:layout_constraintTop_toBottomOf="@id/imgRate"/>
+
+        <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:textSize="10dp"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toEndOf="@id/image_lagnguage"
+                  app:layout_constraintTop_toTopOf="@id/image_lagnguage"
+                  app:layout_constraintBottom_toBottomOf="@id/image_lagnguage"
+                  android:layout_marginLeft="5dp"
+                  tools:text="Language"/>
+        <ImageView android:layout_width="15dp" android:layout_height="15dp"
+                   android:id="@+id/image_data"
+                   android:layout_marginTop="8dp"
+                   android:src="@drawable/ic_date_range"
+                   app:layout_constraintTop_toBottomOf="@id/image_lagnguage"
+                   app:layout_constraintStart_toStartOf="@id/guid_line"
+        />
+        <TextView
+                android:id="@+id/tv_movieDate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/image_data"
+                  app:layout_constraintTop_toTopOf="@id/image_data"
+                  app:layout_constraintBottom_toBottomOf="@id/image_data"
+                  android:text="Data"
+                  android:textColor="@color/white"
+                  android:textSize="10sp"
+                  android:layout_marginLeft="5dp"
+
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgRoot"
+            app:layout_constraintStart_toStartOf="@id/dataRoot"
+            app:layout_constraintBottom_toBottomOf="@id/dataRoot"
+            android:layout_marginStart="20sp"
+            android:layout_marginBottom="20dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgMovie"
+                android:layout_width="115dp"
+                android:layout_height="160dp"
+            android:scaleType="fitXY"
+            tools:background="@color/black"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
