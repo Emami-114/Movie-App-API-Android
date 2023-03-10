@@ -21,7 +21,6 @@ class ApiClien {
             .newBuilder()
             .url(url)
             .build()
-
         return@Interceptor chain.proceed(request)
     }
     private val okHttpClient = OkHttpClient.Builder()
