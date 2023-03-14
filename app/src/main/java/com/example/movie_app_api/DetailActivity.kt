@@ -8,7 +8,6 @@ import coil.size.Scale
 import com.example.movie_app_api.api.ApiClien
 import com.example.movie_app_api.api.ApiService
 import com.example.movie_app_api.databinding.ActivityDetailBinding
-import com.example.movie_app_api.databinding.ActivityMainBinding
 import com.example.movie_app_api.response.DetailsMovies
 import com.example.movie_app_api.utils.Constants.POSTER_BASEURL
 import retrofit2.Call
